@@ -1,16 +1,18 @@
 from fastapi import FastAPI
-from routers import pioggia,temperatura,umidita
+from routers_primo_livello import finestra_temporale
+from datetime import datetime
 
 app = FastAPI()
 
-app.include_router(pioggia.router)
-app.include_router(temperatura.router)
-app.include_router(umidita.router)
-
+app.include_router(finestra_temporale.router)
 
 @app.get("/")
 def root():
   return "Hello world!"
+
+
+
+
 
 
 
