@@ -1,14 +1,13 @@
 from fastapi import FastAPI
-from routers_primo_livello import finestra_temporale
-from datetime import datetime
+from routers_primo_livello import codice_stazione
 
 app = FastAPI()
 
-app.include_router(finestra_temporale.router)
+app.include_router(codice_stazione.router)
 
 @app.get("/")
 def root():
-  return "Hello world!"
+  return "Benvenuti nel server ARPA Sardegna!"
 
 
 
