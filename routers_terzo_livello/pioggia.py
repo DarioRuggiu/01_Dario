@@ -7,4 +7,4 @@ router_3 = APIRouter(
 
 @router_3.get('/')
 def print_text():
-    return "Ecco il dato"
+    return "Ecco il dato della stazione"
