@@ -7,6 +7,6 @@ router = APIRouter(
 
 @router.get('/')
 def print_text(codice_stazione):
-    return "La stazione prescelta è {codice_stazione}. Scegliere la finestra temporale di interesse."
+    return "La stazione prescelta è %s. Scegliere la finestra temporale di interesse." %(codice_stazione)
   
 router.include_router(finestra_temporale.router_2)
