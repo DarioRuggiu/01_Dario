@@ -1,10 +1,10 @@
 from fastapi import APIRouter
 
-router_2 = APIRouter(
+router_3 = APIRouter(
   prefix='/P',
   tags=['P']
 )
 
-@router_2.get('/')
+@router_3.get('/')
 def print_text():
     return "Ecco il dato"
