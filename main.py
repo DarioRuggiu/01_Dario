@@ -11,10 +11,4 @@ def root():
 
 
 
-@app.post("/")
-def root():
-  x=50
-  return x
-
-
 
