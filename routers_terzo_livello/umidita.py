@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Request
 
 router_3 = APIRouter(
   prefix='/UM',
@@ -6,5 +6,6 @@ router_3 = APIRouter(
 )
 
 @router_3.get('/')
-def print_text():
-    return "Ecco il dato della stazione %s per il periodo %s-%s"%(settings.id_stazione,settings.data_ini,settings.data_fin)
+def print_text(request: Request):
+    print(request.path_params)
+    return "Ecco il dato della stazione %s per il periodo %s-%s"
